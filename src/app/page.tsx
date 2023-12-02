@@ -5,6 +5,8 @@ import WindowButtons from "./components/window_buttons";
 import AccountHeaderNavigation from "./components/account_header_navigation";
 import YourFavorites from "./components/your_favorites";
 import PlayerControls from "./components/player_controls";
+import MadeForYou from "./components/made_for_you";
+import YourFriendsPlaylist from "./components/your_friends_playlist";
 
 export default function Home() {
   return (
@@ -23,6 +25,12 @@ export default function Home() {
           </Flex>
           <Flex className="my-8">
             <YourFavorites />
+          </Flex>
+          <Flex className="my-8">
+            <MadeForYou />
+          </Flex>
+          <Flex className="my-8">
+            <YourFriendsPlaylist />
           </Flex>
         </Flex>
         <Flex justify="center">

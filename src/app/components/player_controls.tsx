@@ -196,7 +196,7 @@ export default function PlayerControls() {
   const currentSong = songs[currentSongIndex];
 
   return (
-    <Box className="w-full max-w-5xl bg-zinc-900/30 backdrop-blur-lg border border-neutral-600 p-2 rounded-3xl absolute bottom-12">
+    <Box className="w-full max-w-5xl bg-zinc-900/30 backdrop-blur-lg border border-neutral-600 p-2 rounded-3xl fixed bottom-12">
       <audio ref={audioRef} preload="metadata">
         <source src={currentSong.src} type="audio/mpeg" />
       </audio>
