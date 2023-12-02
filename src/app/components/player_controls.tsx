@@ -74,6 +74,7 @@ export default function PlayerControls() {
 
       const setAudioTime = () => {
         setPlayTime(Math.floor(audio.currentTime));
+        setSeekTime(Math.floor(audio.currentTime));
       };
 
       audio.addEventListener("loadeddata", setAudioData);
@@ -127,6 +128,7 @@ export default function PlayerControls() {
     setCurrentSongIndex((prevIndex) => {
       return prevIndex < songs.length - 1 ? prevIndex + 1 : 0;
     });
+    setSeekTime(0);
     onUserInteraction();
   }, []);
 
@@ -134,6 +136,7 @@ export default function PlayerControls() {
     setCurrentSongIndex((prevIndex) => {
       return prevIndex > 0 ? prevIndex - 1 : songs.length - 1;
     });
+    setSeekTime(0);
     onUserInteraction();
   }, []);
 
