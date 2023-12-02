@@ -150,6 +150,7 @@ export default function PlayerControls() {
 
   const handleSeekChange = (value: number) => {
     if (audioRef.current) {
+      audioRef.current.pause();
       // Clear existing timeout if there is one
       if (seekTimeout) {
         clearTimeout(seekTimeout);
